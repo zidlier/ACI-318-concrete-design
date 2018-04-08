@@ -1,0 +1,57 @@
+INPUT FILE: beaminput.txt
+
+INPUT FORMAT:
+
+43 - First line will be no. of beam to be designed
+B-1	200.0	400.0	4800.0	16.0	10.0	28.0	415.0	275.0	89.14	40.0	45.0	93.295	110.18	60.0	129.18	0.0	129.18    0.01
+.
+.
+.
+B-N	200.0	400.0	4800.0	16.0	10.0	28.0	415.0	275.0	89.14	40.0	45.0	93.295	110.18	60.0	129.18	0.0	129.18    0.01
+
+!Take note, 2nd line should have arbitrary input value since result for beam will be discarded. Hence, just repeat the first beam on 2nd and 3rd lines
+
+
+#BeamMark
+Beam Width, mm
+Beam Depth, mm
+Clear span, mm
+Main bar dia. db, mm
+Stir. dia ds, mm
+Concrete fc, MPa
+Steel fy, MPa
+Stirrup yield fyt, MPa
+
+#From Frame Analysis - Moment
+SupportMoment1 - Top (Absolute value), kNm
+MidspanMoment - Bottom, kNm
+SupportMoment2 - Top, kNm
+
+#Shear Envelope
+Support1Shear, kN
+MidspanShear, kN
+Support2Shear, kN
+
+Torsion, kNm
+
+
+For OUTPUT FILE:
+B-1	200.00	400.00	16.00	 3.85	 1.93	 2.03	 4.05	 4.91	 2.45	10.00	1@50, 8@100mm, rest@200	 1 
+.
+.
+.
+B-N	200.00	400.00	16.00	 3.85	 1.93	 2.03	 4.05	 4.91	 2.45	10.00	1@50, 8@100mm, rest@200	 1 
+
+BeamMark
+Width
+Depth
+Dia
+no. of rebar - Support1Top
+no. of rebar - Support1Bot
+no. of rebar - MidTop
+no. of rebar - MidBot
+no. of rebar - Support2Top
+no. of rebar - Support2Bot
+ds
+Spacing	- 1@50 and @100mm for 2*h for support
+Remarks - 1 if pass, 0 if to revise stirrup spacing

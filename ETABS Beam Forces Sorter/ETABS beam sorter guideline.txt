@@ -1,0 +1,61 @@
+ETABS BEAM FORCES SORTER
+
+Input file: etabsbeamforces.txt
+
+Input Format: 
+
+ STORY2      B2          COMAX   
+                                   0.1250        4.12        9.65        3.50       1.025       2.326       8.633
+                                   0.6417        4.12       10.41        3.50       1.025       0.519       3.451
+                                   1.1583        4.12       11.18        3.50       1.025       1.364       2.888
+                                   1.6750        4.12       11.95        3.50       1.025       3.343       8.271
+ STORY2      B2          COMIN   
+                                   0.1250       -4.26      -12.34       -3.83      -1.250      -2.594      -9.067
+                                   0.6417       -4.26      -11.57       -3.83      -1.250      -0.615      -2.892
+                                   1.1583       -4.26      -10.80       -3.83      -1.250      -1.287      -2.127
+                                   1.6750       -4.26      -10.04       -3.83      -1.250      -3.094      -8.101
+
+
+
+
+Note: Always repeat envelope forces for first beam. Disregard first result in output.
+Data format from ETABS print to file frame forces
+
+#in kN and kN-m
+Story level
+Beam label (ETABS)
+Load combination (max envelope, min envelope)
+Location
+Axial load, P, kN
+Shear force, V2, kN
+Shear force, V3, kN
+Moment M11, kN-m
+Moment M22, kN-m
+Moment M33, kN-m
+
+
+
+Output format:
+STORY2	 B2	 COMAX	 0.000	  8.63	  0.00	  0.00	  9.65	  0.00	 0.00	  0.00	
+STORY2	 B2	 COMIN	 1.675	 -9.07	 -2.13	 -8.10	 -12.34	 -10.80	-10.04	 -1.25	
+STORY2	 B2	 COMAX	 1.675	  8.63	  2.89	  8.27	  9.65	 11.18	11.95	  1.02	
+STORY2	 B2	 COMIN	 1.675	 -9.07	 -2.13	 -8.10	 -12.34	 -10.80	-10.04	 -1.25	
+.
+.
+.
+STORY2	 B31	 COMAX	 2.050	  0.00	  2.73	  0.00	 -1.91	 -0.27	 8.51	 -0.34	
+STORY2	 B31	 COMIN	 2.050	  0.00	  1.21	  0.00	 -3.57	 -1.38	 3.17	 -2.18	
+
+
+Note: If user input number of beam to be analyzed is greater than the beam in data, program will loop to first beam and will repeat output value. User will manually delete excess output data.
+Story
+Beam label
+Envelope (max, min)
+SupportMoment1 - Top (Absolute value), kNm
+MidspanMoment - Bottom, kN-m
+SupportMoment2 - Top, kN-m
+Support1Shear, kN
+MidspanShear, kN
+Support2Shear, kN
+Torsion, kN-m
+

@@ -1,0 +1,27 @@
+
+INPUT FILE: slabinput.txt
+
+INPUT FORMAT:
+
+5 - First line will be no. of slab to be designed
+2S-1 2900.0 3900.0 100.0 10.0 28.0 275.0 7.04 2.0 1
+
+#Slabmark
+#shorterlengthLA,mm
+#longerlengthLB,mm
+#thicknessofslab,mm
+#bar diameter, mm
+#compressive strength, fc, MPa
+#yield strength, fy, MPa
+#Dead load, kPa
+#Live load, kPa
+#Slab load case - using moment coefficients
+
+
+For OUTPUT FILE:
+2S-1	100.00	10.00	392.70	234.23	 0.00	 0.00	376.00	392.70	 
+
+#SlabMark
+#Thickness,mm
+#Dia,mm
+
